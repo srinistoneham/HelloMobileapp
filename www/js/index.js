@@ -66,7 +66,7 @@ app.initialize();
                             'Heading: '            + position.coords.heading               + '<br />' +
                             'Speed: '              + position.coords.speed                 + '<br />' +
                             'Timestamp: '          + position.timestamp                    + '<br />';
-         element.innerHTML         
+      
          element.innerHTML  = msg;
          alert(msg);
     }
