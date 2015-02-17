@@ -30,14 +30,11 @@ under the License.
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/fastclick.js"></script>
         <style type="text/css">
-        
-            .ui-btn { height: 65px; font-size: 25px; margin-top: 5px !important;}
-        
+         .grey_color{ color:#ccc; font-size:14px; }
             .style1
             {
-                color: #FF3300;
+                color: #CC3300;
             }
-        
         </style>
 	</head>
 	<body>
@@ -46,12 +43,13 @@ under the License.
 				    <h1>AAGIT Mobile</h1>
 			    </div>
     		    <div data-role="main" class="ui-content">
-                          <span class="style1">Please Make Sure Your GPS&nbsp; is ON.</span><br />
+                          <span class="style1"><strong>Please Make Sure Your GPS&nbsp; is ON.</strong></span><br />
                           <br />
                       <br />
-                          <select id="Select1" name="D1">
-                              <option>Select Code</option>
-                              <option>34531</option>
+                      Select Code
+                          Below:
+                          <select id="Select1" name="D1" >
+                               <option selected="selected" class="grey_color">Select Code</option>>
                               <option>dfgbdfg1</option>
                           </select><br />
                           <br />
@@ -61,7 +59,7 @@ under the License.
                           <br />
                           <br />
 
-                          <input id="Button1" type="button" value="Punch Your <br> Location"  />
+                          <input id="Button1" type="button" value="Punch Your <br> Location"  style="height: 75px; font-size: 25px;" />
               
                 </div>
 
