@@ -19,39 +19,35 @@ under the License.
 -->
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<meta name="format-detection" content="telephone=no" />
-		<meta name="msapplication-tap-highlight" content="no" />
-		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-		<!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
-		<script type='application/javascript' src='/js/fastclick.js'></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Hello World</title>
+		<link rel="stylesheet" type="text/css" href="css/ikms.css" /> 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
 	</head>
 	<body>
-		<div class="app">
-			<h1>Hello World</h1>
-<!--			<div id="deviceready" class="blink">
-				<p class="event listening">
-					Connecting to Device
-				</p>
-				<p class="event received">
-					Device is Ready
-				</p>
-			</div>-->
+    		<div data-role="page" data-theme="a">
+			    <div data-role="header">
+				    <h1>AAGIT Mobile  </h1>
+			    </div>
+    		    <div data-role="main" class="ui-content">
+                              <br />
+                     <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                            
+                    <input id="Button1" type="button" value="Punch Your Location"  />
 
-            			   <button name="PunchClock" style="width: 210px;height:100px;margin-bottom: 100px;" onclick="GetGPS();">Punch Clock</button>	
-			   <br>
-			   <br>
-			 
-			 <p id="geolocation">Finding geolocation...</p>
-		</div>
-		
-		<div>
+                </div>
 
-			
-			
-		</div>
-		<script type="text/javascript" src="js/index.js"></script>
+            </div>
+
 	</body>
 </html>
