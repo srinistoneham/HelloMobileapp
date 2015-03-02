@@ -30,7 +30,7 @@ var app = {
         
         if ('addEventListener' in document) {
     		document.addEventListener('DOMContentLoaded', function() {
-        	FastClick.attach(document.body);
+        	//FastClick.attach(document.body);
     		}, false);
 		}
         
@@ -61,14 +61,16 @@ app.initialize();
 
 function GetGPS()
 {
-	
-	        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    showSpinner("Getting GPS Location");
+	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 }
 
 //GeoLocation Details
   // onSuccess Geolocation
     //
-    function onSuccess(position) {
+function onSuccess(position) {
+
+    hideSpinner();
         var element = document.getElementById('geolocation');
         
         var msg = 'Latitude: '           + position.coords.latitude              + '<br />' +
@@ -87,6 +89,24 @@ function GetGPS()
     // onError Callback receives a PositionError object
     //
     function onError(error) {
+        hideSpinner();
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
+    }
+
+
+    function showSpinner(msg) {
+        var options = {
+            customSpinner: true,
+            position: "middle",
+            label: msg,
+            bgColor: "#000",
+            opacity: 0.5,
+            color: "#000"
+        };
+        window.wizSpinner.show(options);
+    }
+
+    function hideSpinner() {
+        window.wizSpinner.hide();
     }
