@@ -60,7 +60,6 @@ var app = {
 
 app.initialize();
 
-
 function GetGPS() {
    // alert('fff');
     showSpinner("Getting GPS Location");
@@ -99,28 +98,21 @@ function onSuccess(position) {
 
 
     function showSpinner(msg) {
-//        var options = {
-//            customSpinner: true,
-//            position: "middle",
-//            label: msg,
-//            bgColor: "#000",
-//            opacity: 0.5,
-//            color: "#000"
-//        };
-        //        window.wizSpinner.show(options);
+        var options = {
+            customSpinner: true,
+            position: "middle",
+            label: msg,
+            bgColor: "#000",
+            opacity: 0.5,
+            color: "#000"
+        };
+        window.plugins.wizSpinner.show(options);
         
 
-//        window.plugins.spinnerDialog.hide();
-//            window.plugins.spinnerplugin.show({
-//                overlay: false,    // defaults to true
-//                timeout: 30,       // defaults to 0 (no timeout)
-//                fullscreen: true,  // defaults to false
-        //            });
 
-        window.spinnerDialog.show(null, "message");
         
     }
 
     function hideSpinner() {
-        window.spinnerDialog.hide();
+        window.plugins.wizSpinner.hide();
     }
