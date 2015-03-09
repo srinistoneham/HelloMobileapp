@@ -18,49 +18,51 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         this.bindEvents();
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
+    bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        
+
         if ('addEventListener' in document) {
-    		document.addEventListener('DOMContentLoaded', function() {
-        	//FastClick.attach(document.body);
-    		}, false);
-		}
-        
+            document.addEventListener('DOMContentLoaded', function () {
+                //FastClick.attach(document.body);
+            }, false);
+        }
+
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+    onDeviceReady: function () {
+        alert('test');
+         app.receivedEvent('deviceready');
+        GetGPS();
 
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+    receivedEvent: function (id) {
+//        var parentElement = document.getElementById(id);
+//        var listeningElement = parentElement.querySelector('.listening');
+//        var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+//        listeningElement.setAttribute('style', 'display:none;');
+//        receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+//        console.log('Received Event: ' + id);
     }
 };
 
 app.initialize();
 
 
-function GetGPS()
-{
+function GetGPS() {
+   // alert('fff');
     showSpinner("Getting GPS Location");
 	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 }
@@ -71,6 +73,7 @@ function GetGPS()
 function onSuccess(position) {
 
     hideSpinner();
+    showSpinner('Loading....');
         var element = document.getElementById('geolocation');
         
         var msg = 'Latitude: '           + position.coords.latitude              + '<br />' +
@@ -82,7 +85,7 @@ function onSuccess(position) {
                             'Speed: '              + position.coords.speed                 + '<br />' +
                             'Timestamp: '          + position.timestamp                    + '<br />';
       
-         element.innerHTML  = msg;
+        // element.innerHTML  = msg;
          alert(msg);
     }
 
@@ -96,17 +99,25 @@ function onSuccess(position) {
 
 
     function showSpinner(msg) {
-        var options = {
-            customSpinner: true,
-            position: "middle",
-            label: msg,
-            bgColor: "#000",
-            opacity: 0.5,
-            color: "#000"
-        };
-        window.wizSpinner.show(options);
+//        var options = {
+//            customSpinner: true,
+//            position: "middle",
+//            label: msg,
+//            bgColor: "#000",
+//            opacity: 0.5,
+//            color: "#000"
+//        };
+        //        window.wizSpinner.show(options);
+
+            window.spinnerplugin.show({
+                overlay: false,    // defaults to true
+                timeout: 30,       // defaults to 0 (no timeout)
+                fullscreen: true,  // defaults to false
+            });
+        
     }
 
     function hideSpinner() {
-        window.wizSpinner.hide();
+        //wizSpinner.hide();
+        window.spinnerplugin.hide();
     }

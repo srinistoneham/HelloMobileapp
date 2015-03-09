@@ -10,4 +10,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="SpinnerPlugin">
+        <param name="android-package" value="it.mobimentum.phonegapspinnerplugin.SpinnerPlugin" />
+    </feature>
 </widget>

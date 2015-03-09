@@ -20,6 +20,12 @@
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden|keyboard|screenSize|locale\" android:launchMode=\"singleInstance\" android:name=\"it.mobimentum.phonegapspinnerplugin.ProgressActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"><intent-filter></intent-filter></activity>",
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -41,6 +47,10 @@
                         {
                             "xml": "<feature name=\"WizSpinnerPlugin\"><param name=\"android-package\" value=\"jp.wizcorp.phonegap.plugin.wizSpinner.WizSpinnerPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SpinnerPlugin\"><param name=\"android-package\" value=\"it.mobimentum.phonegapspinnerplugin.SpinnerPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -61,6 +71,9 @@
             "PACKAGE_NAME": "com.example.hello"
         },
         "jp.wizcorp.phonegap.plugin.wizSpinnerPlugin": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "it.mobimentum.phonegapspinnerplugin": {
             "PACKAGE_NAME": "com.example.hello"
         }
     },
