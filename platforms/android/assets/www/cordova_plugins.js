@@ -180,6 +180,13 @@ module.exports = [
         "clobbers": [
             "window.spinnerplugin"
         ]
+    },
+    {
+        "file": "plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www/spinner.js",
+        "id": "hu.dpal.phonegap.plugins.SpinnerDialog.SpinnerDialog",
+        "merges": [
+            "window.plugins.spinnerDialog"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -190,7 +197,8 @@ module.exports.metadata =
     "org.apache.cordova.dialogs": "0.2.11",
     "org.apache.cordova.file": "1.3.2",
     "jp.wizcorp.phonegap.plugin.wizSpinnerPlugin": "1.2.0",
-    "it.mobimentum.phonegapspinnerplugin": "1.2.1"
+    "it.mobimentum.phonegapspinnerplugin": "1.2.1",
+    "hu.dpal.phonegap.plugins.SpinnerDialog": "1.3.1"
 }
 // BOTTOM OF METADATA
 });

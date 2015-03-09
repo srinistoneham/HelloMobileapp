@@ -108,19 +108,16 @@ function onSuccess(position) {
 //            color: "#000"
 //        };
         //        window.wizSpinner.show(options);
-        
 
-//        window.plugins.spinnerDialog.hide();
-//            window.plugins.spinnerplugin.show({
-//                overlay: false,    // defaults to true
-//                timeout: 30,       // defaults to 0 (no timeout)
-//                fullscreen: true,  // defaults to false
-        //            });
-
-        window.spinnerDialog.show(null, "message");
+            window.spinnerplugin.show({
+                overlay: false,    // defaults to true
+                timeout: 30,       // defaults to 0 (no timeout)
+                fullscreen: true,  // defaults to false
+            });
         
     }
 
     function hideSpinner() {
-        window.spinnerDialog.hide();
+        //wizSpinner.hide();
+        window.spinnerplugin.hide();
     }
